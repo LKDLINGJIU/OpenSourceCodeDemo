@@ -5,12 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="android.yc.com.open.sourcecode.demo.MainActivity">
+    tools:context=".SecondActivity">
 
     <Button
-        android:onClick="toSecondActivity"
+        android:onClick="sendMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳往secondActivity" />
-
+        android:text="发送message" />
+    <Button
+        android:onClick="goThirdActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="goThirdActivity" />
 </LinearLayout>
