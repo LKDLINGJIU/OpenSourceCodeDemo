@@ -7,16 +7,16 @@ import java.lang.reflect.Method;
 /**
  * Created by lingjiu on 2019/1/9.
  */
-public class SubscribeEntity implements Comparable {
+public class Subscription implements Comparable {
 
     //注册的类
     public Object object;
     //被注解的方法
     public Method method;
     public int priority;
-    public String threadMode;
+    public ThreadMode threadMode;
 
-    public SubscribeEntity(Object object, Method method, int priority, String threadMode) {
+    public Subscription(Object object, Method method, int priority, ThreadMode threadMode) {
         this.object = object;
         this.method = method;
         this.priority = priority;
@@ -37,8 +37,8 @@ public class SubscribeEntity implements Comparable {
 
     @Override
     public int compareTo(@NonNull Object o) {
-        if (!(o instanceof SubscribeEntity))
+        if (!(o instanceof Subscription))
             return -1;
-        return priority - ((SubscribeEntity) o).priority;
+        return priority - ((Subscription) o).priority;
     }
 }

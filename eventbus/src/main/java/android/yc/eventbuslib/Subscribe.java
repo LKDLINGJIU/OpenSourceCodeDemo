@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Subscribe {
     //线程模式
-    String threadMode() default ThreadMode.POSTING;
+    ThreadMode threadMode() default ThreadMode.POSTING;
 
     //是否是粘性消息(可往下面传递)
     boolean sticky() default false;
